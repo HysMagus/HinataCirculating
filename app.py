@@ -24,7 +24,7 @@ def get_circulating_supply():
     print("Gnosis Balance " + str(not_circulating_gnosis_balance))
     total_supply = contract.functions.totalSupply().call() // DECIMALS
     print("Total Supply " + str(total_supply))
-    circulating_supply = int(total_supply) - int(not_circulating_vesting_balance) - int(not_circulating_gnosis_balance)
+    circulating_supply = int(total_supply) - int(not_circulating_vesting_balance)
     print("Circulating Supply " + str(circulating_supply))
     return str(circulating_supply)
 
